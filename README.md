@@ -1,10 +1,15 @@
-## Don't cry I am just a fish
+## Software & Libraries
 
-### What I am working on
+ - [goboscript](https://github.com/aspizu/goboscript) - Programming language compiler written in Rust.
+ - [backpack](https://github.com/aspizu/backpack) - Package manager written in Rust.
+ - [neocities-sync](https://github.com/aspizu/neocities-sync) - Fast neocities website deployment tool written in Rust.
+ - [reproca](https://github.com/aspizu/reproca) - Fully end-to-end type-safe RPC API framework for Python, with type-translation to TypeScript.
+ - [signal-router](https://github.com/aspizu/signal-router) - Efficient React/Preact routing framework built using Signals.
+ - [onyo](https://github.com/aspizu/onyo) - Interpreted programming language written in Rust and Python.
+ - [musync](https://github.com/aspizu/musync) - Program to efficiently convert and copy lossless music onto USB flash drive, while organizing music into playlists.
+ - [rxhkd](https://github.com/aspizu/rxhkd) - Linux program to program keyboard shortcuts written in Rust.
 
-onyo is an interpreted programming language written in Rust.
-
-<https://github.com/aspizu/onyo/tree/rust>
-
-
-<table><tbody><tr><td><a href="https://octo-ring.com/"><img src="https://octo-ring.com/static/img/widget/top.png" width="99%" alt="Octo Ring logo" align="top"></a><br><a href="https://octo-ring.com/p/aspizu/prev"><img src="https://octo-ring.com/static/img/widget/prev.png" width="33%" alt="previous" align="top" title="previous profile"></a><a href="https://octo-ring.com/p/aspizu/random"><img src="https://octo-ring.com/static/img/widget/random.png" width="33%" alt="random" align="top" title="random profile"></a><a href="https://octo-ring.com/p/aspizu/next"><img src="https://octo-ring.com/static/img/widget/next.png" width="33%" alt="next" align="top" title="next profile"></a><br><a href="https://octo-ring.com/"><img src="https://octo-ring.com/static/img/widget/bottom.png" width="99%" alt="check out other GitHub profiles in the Octo Ring" align="top"></a></td></tr></tbody></table>
+## Projects
+ - [coffee-zone](https://github.com/aspizu/coffee-zone) - Reddit clone created using the reproca framework, Preact and signal-router.
+ - [bitway](https://github.com/aspizu/bitway) - LinkedIn clone created using React, NextUI and reproca.
+ - 
