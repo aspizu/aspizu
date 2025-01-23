@@ -12,4 +12,3 @@
 ## Projects
  - [coffee-zone](https://github.com/aspizu/coffee-zone) - Reddit clone created using the reproca framework, Preact and signal-router.
  - [bitway](https://github.com/aspizu/bitway) - LinkedIn clone created using React, NextUI and reproca.
- - 
