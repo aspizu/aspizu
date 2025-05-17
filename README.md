@@ -3,6 +3,7 @@
  - [musync](https://github.com/aspizu/musync) - Program to efficiently convert and copy lossless music onto USB flash drive, while organizing music into playlists.
  - [neocities-sync](https://github.com/aspizu/neocities-sync) - Fast neocities website deployment tool written in Rust.
  - [rxhkd](https://github.com/aspizu/rxhkd) - Linux program to program keyboard shortcuts written in Rust.
+ - [libmonotone](https://github.com/aspizu/libmonotone) -  MONTONE tracker playback library in C.
  - [signal-router](https://github.com/aspizu/signal-router) - Efficient React/Preact routing framework built using Signals.
  - [reproca](https://github.com/aspizu/reproca) - Fully end-to-end type-safe RPC API framework for Python, with type-translation to TypeScript.
  - [backpack](https://github.com/aspizu/backpack) - Package manager written in Rust.
