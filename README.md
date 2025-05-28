@@ -1,4 +1,5 @@
  - [goboscript](https://github.com/aspizu/goboscript) - Programming language compiler written in Rust.
+ - [goboscript IDE](https://github.com/aspizu/goboscript.ide) - IDE made in React using Monaco Editor.
  - [faithful-tweaks](https://github.com/aspizu/faithful-tweaks/) - Vanilla Tweaks ported to Faithful 32x and 64x.
  - [musync](https://github.com/aspizu/musync) - Program to efficiently convert and copy lossless music onto USB flash drive, while organizing music into playlists.
  - [neocities-sync](https://github.com/aspizu/neocities-sync) - Fast neocities website deployment tool written in Rust.
