@@ -1,5 +1,6 @@
  - [goboscript](https://github.com/aspizu/goboscript) - Programming language compiler written in Rust.
  - [goboscript IDE](https://github.com/aspizu/goboscript.ide) - IDE made in React using Monaco Editor.
+ - [tshu](https://github.com/aspizu/tshu) - Run safe and cross-platform bash commands using Python 3.14's t-strings 
  - [faithful-tweaks](https://github.com/aspizu/faithful-tweaks/) - Vanilla Tweaks ported to Faithful 32x and 64x.
  - [msglint](https://github.com/aspizu/msglint) - lints your git commit messages, use as a pre-commit hook.
  - [musync](https://github.com/aspizu/musync) - Program to efficiently convert and copy lossless music onto USB flash drive, while organizing music into playlists.
