@@ -1,8 +1,5 @@
 ```
-                    _            
-  ____ __________  (_)___  __  __
- / __ `/ ___/ __ \/ /_  / / / / /
-/ /_/ (__  ) /_/ / / / /_/ /_/ / 
-\__,_/____/ .___/_/ /___/\__,_/  
-         /_/
+Change everything you are
+And everything you were
+Your number has been called ...
 ```
