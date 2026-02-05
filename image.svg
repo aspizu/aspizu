@@ -1,14 +1,165 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
- width="100%" height="100%" viewBox="-4 -4 8 8">
- <title>SVG animation using CSS</title>
- <style>
-  @keyframes rot_kf {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
-  }
-  .rot { animation: rot_kf 1s linear infinite; }
- </style>
- <circle class="rot" 
-  cx="0" cy="1" r="2" stroke="blue" fill="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- Gradient definitions -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <animate attributeName="x1" values="0%;100%;0%" dur="10s" repeatCount="indefinite"/>
+      <animate attributeName="y1" values="0%;100%;0%" dur="8s" repeatCount="indefinite"/>
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1">
+        <animate attributeName="stop-color" values="#667eea;#764ba2;#f093fb;#667eea" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1">
+        <animate attributeName="stop-color" values="#764ba2;#f093fb;#667eea;#764ba2" dur="6s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <linearGradient id="linkGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#feca57;stop-opacity:1"/>
+    </linearGradient>
+    
+    <linearGradient id="linkGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#48dbfb;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0abde3;stop-opacity:1"/>
+    </linearGradient>
+    
+    <linearGradient id="linkGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1dd1a1;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#10ac84;stop-opacity:1"/>
+    </linearGradient>
+    
+    <linearGradient id="linkGradient4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ee5a6f;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#c44569;stop-opacity:1"/>
+    </linearGradient>
+    
+    <!-- Filter for glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Animated background -->
+  <rect width="800" height="600" fill="url(#bgGradient)"/>
+  
+  <!-- Floating particles -->
+  <circle cx="100" cy="100" r="3" fill="#ffffff" opacity="0.6">
+    <animate attributeName="cy" values="100;500;100" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="700" cy="200" r="4" fill="#ffffff" opacity="0.5">
+    <animate attributeName="cy" values="200;450;200" dur="10s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;0.1;0.5" dur="10s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="300" cy="400" r="2" fill="#ffffff" opacity="0.7">
+    <animate attributeName="cy" values="400;100;400" dur="12s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;0.3;0.7" dur="12s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Title -->
+  <text x="400" y="80" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#ffffff" text-anchor="middle" opacity="0">
+    Interactive Links
+    <animate attributeName="opacity" values="0;1" dur="1s" fill="freeze"/>
+  </text>
+  
+  <!-- Link 1: Design Portfolio -->
+  <a href="https://example.com/design" target="_blank">
+    <g class="link-group" transform="translate(0, 0)">
+      <animate attributeName="transform" values="translate(0,0);translate(0,-5);translate(0,0)" dur="3s" begin="0s" repeatCount="indefinite"/>
+      
+      <rect x="150" y="150" width="200" height="80" rx="15" fill="url(#linkGradient1)" opacity="0.9" filter="url(#glow)">
+        <animate attributeName="opacity" values="0;0.9" dur="0.8s" begin="0.3s" fill="freeze"/>
+        <animate attributeName="width" values="200;210;200" dur="2s" repeatCount="indefinite"/>
+      </rect>
+      
+      <text x="250" y="195" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle" opacity="0">
+        🎨 Design
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.5s" fill="freeze"/>
+      </text>
+    </g>
+  </a>
+  
+  <!-- Link 2: Code Projects -->
+  <a href="https://github.com" target="_blank">
+    <g class="link-group">
+      <animate attributeName="transform" values="translate(0,0);translate(0,-5);translate(0,0)" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+      
+      <rect x="450" y="150" width="200" height="80" rx="15" fill="url(#linkGradient2)" opacity="0.9" filter="url(#glow)">
+        <animate attributeName="opacity" values="0;0.9" dur="0.8s" begin="0.5s" fill="freeze"/>
+        <animate attributeName="width" values="200;210;200" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+      </rect>
+      
+      <text x="550" y="195" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle" opacity="0">
+        💻 Code
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.7s" fill="freeze"/>
+      </text>
+    </g>
+  </a>
+  
+  <!-- Link 3: Blog -->
+  <a href="https://example.com/blog" target="_blank">
+    <g class="link-group">
+      <animate attributeName="transform" values="translate(0,0);translate(0,-5);translate(0,0)" dur="3s" begin="1s" repeatCount="indefinite"/>
+      
+      <rect x="150" y="280" width="200" height="80" rx="15" fill="url(#linkGradient3)" opacity="0.9" filter="url(#glow)">
+        <animate attributeName="opacity" values="0;0.9" dur="0.8s" begin="0.7s" fill="freeze"/>
+        <animate attributeName="width" values="200;210;200" dur="2s" begin="1s" repeatCount="indefinite"/>
+      </rect>
+      
+      <text x="250" y="325" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle" opacity="0">
+        ✍️ Blog
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.9s" fill="freeze"/>
+      </text>
+    </g>
+  </a>
+  
+  <!-- Link 4: Contact -->
+  <a href="mailto:hello@example.com">
+    <g class="link-group">
+      <animate attributeName="transform" values="translate(0,0);translate(0,-5);translate(0,0)" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+      
+      <rect x="450" y="280" width="200" height="80" rx="15" fill="url(#linkGradient4)" opacity="0.9" filter="url(#glow)">
+        <animate attributeName="opacity" values="0;0.9" dur="0.8s" begin="0.9s" fill="freeze"/>
+        <animate attributeName="width" values="200;210;200" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+      </rect>
+      
+      <text x="550" y="325" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle" opacity="0">
+        📧 Contact
+        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.1s" fill="freeze"/>
+      </text>
+    </g>
+  </a>
+  
+  <!-- Central animated icon -->
+  <g transform="translate(400, 450)">
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.4">
+      <animate attributeName="r" values="40;50;40" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0.1;0.4" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="30" fill="#ffffff" opacity="0.8">
+      <animate attributeName="r" values="30;35;30" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="0" y="10" font-size="30" text-anchor="middle" fill="#667eea">✨</text>
+  </g>
+  
+  <!-- Footer text -->
+  <text x="400" y="550" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle" opacity="0.7">
+    Click any link to explore!
+    <animate attributeName="opacity" values="0.7;0.4;0.7" dur="2s" repeatCount="indefinite"/>
+  </text>
+  
+  <style>
+    a:hover rect {
+      opacity: 1 !important;
+    }
+    a:hover text {
+      font-size: 24px;
+    }
+    a:active rect {
+      transform: scale(0.95);
+    }
+  </style>
 </svg>
